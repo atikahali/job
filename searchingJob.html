@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Searching for Job</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		
+		img { 
+			position:center;
+		}
+		.footer {
+			font-size: 14px;
+			text-align: center;
+		}
+				* {
+		  box-sizing: border-box;
+		}
+		
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		/* Style the header */
+		header {
+		  background-color: #666;
+		  padding: 30px;
+		  text-align: center;
+		  font-size: 35px;
+		  color: white;
+		}
+		
+		/* Container for flexboxes */
+		section {
+		  display: -webkit-flex;
+		  display: flex;
+		}
+		
+		/* Style the navigation menu */
+		nav {
+		  -webkit-flex: 1;
+		  -ms-flex: 1;
+		  flex: 1;
+		  background: #ccc;
+		  padding: 20px;
+		}
+		
+		/* Style the list inside the menu */
+		nav ul {
+		  list-style-type: none;
+		  padding: 0;
+		}
+		
+		/* Style the content */
+		article {
+		  -webkit-flex: 3;
+		  -ms-flex: 3;
+		  flex: 3;
+		  background-color: #f1f1f1;
+		  padding: 10px;
+		}
+		
+		/* Style the footer */
+		footer {
+		  background-color: #777;
+		  padding: 10px;
+		  text-align: center;
+		  color: white;
+		}
+		
+		/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+		@media (max-width: 600px) {
+		  section {
+			-webkit-flex-direction: column;
+			flex-direction: column;
+		  }
+		}
+	</style>
+</head>
+
+<body>
+	<div class="jumbotron" align="center">
+    <img src="pic/twitter_header_photo_3.png" alt="logo">
+	</div>
+    
+	<div class="container" id="main-content" >
+    
+    <section>
+  		<nav>
+     		<form>
+                INDUSTRY </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="bankingFinancial">Banking & Financial</option>
+                  <option value="computerIT">Computer & IT</option>
+                  <option value="education">Education</option>
+                  <option value="foodBeverage">Food & Beverage</option>
+                  <option value="property">Property & Real Estate</option>
+                </select></br></br>
+                
+                COMPANY </br>
+                <input type="text" name="company" value=""></br></br>
+                
+                JOB </br>
+                <input type="text" name="job" value=""></br></br>
+                
+                SKILLS </br>
+                <input type="text" name="skills" value=""></br></br>
+                
+                PROVINCE </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="riau">Riau</option>
+                  <option value="jakarta">Ibukota Jakarta</option>
+                  <option value="sumatera">Sumatera Utara</option>
+                  <option value="islands">Riau Islands</option>
+                </select></br></br>
+                
+                CITY </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="pekanbaru">Kota Pekanbaru</option>
+                  <option value="jakartaselatan">Kota Jakarta Selatan</option>
+                  <option value="medan">Kota Medan</option>
+                  <option value="pelalawan">Pelalawan Regency</option>
+                  <option value="batam">Batam City</option>
+                  <option value="jakartautara">Kota Jakarta Utara</option>
+                  <option value="jakartabarat">Kota Jakarta Barat</option>
+                  <option value="property">PT Zona Property Indonesia</option>
+                  <option value="jakartapusat">Kota Jakarta Pusat</option>
+                  <option value="jakartatimur">Kota Jakarta Timur</option>
+                  <option value="jakartaselatan">Kota Jakarta Selatan</option>
+                </select></br></br>
+                
+                YEARS EXPERIENCE</br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select></br></br>
+                
+                EXPECTED SALARY</br>
+                MIN <input type="range" name="salary" min="10000000" max="30000000"> MAX</br></br>
+                
+                <button class="btn btn-success justify-content-center d-flex pp " id="reload" type="button">Submit</button>
+            </form>
+          </nav>
+          
+          <article>
+            <h1>Company/Industry</h1>
+            <button class="btn btn-danger mx-1 mb-1 kun" id="stabilize" type="button">Stop the moving graph</button>
+          </article>
+        </section>
+      </div>
+          
+          <div class="footer">
+				S3A <sup>&copy;</sup> 2019
+		  </div>
+</body>
+</html>

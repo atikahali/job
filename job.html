@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Searching for Job</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- my font -->
+    <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!-- neo4j -->
+    <script src="../neovis.js"></script>
+    <script src="../data.js"></script>
+  </head>
+  
+  
+  <body onload="draw()">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <div class="container">
+        <a class="navbar-brand" href="#">Searching for Job</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <center><img src="pic/twitter_header_photo_3.png" alt="logo" >
+		<h1>Welcome to Searching for Job</h1></center>
+		<style>
+			body {
+				background-repeat: no-repeat;
+    			background-position: center;
+    			margin-right: 200px;
+    			background-attachment: fixed;
+			}
+		</style>
+      </div>
+      
+    </div>
+    <!-- end jumboton -->
+    <!-- info panel -->
+    <div class="container">
+      <div class="row left">
+        <div class="col info-panel">
+          <div class="row left">
+            <form class="form-inline">
+            
+              <div class="form-goup">
+              <table>
+                INDUSTRY </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="bankingFinancial">Banking & Financial</option>
+                  <option value="computerIT">Computer & IT</option>
+                  <option value="education">Education</option>
+                  <option value="foodBeverage">Food & Beverage</option>
+                  <option value="property">Property & Real Estate</option>
+                </select></br></br>
+                
+                COMPANY </br>
+                <input type="text" name="company" value=""></br></br>
+                
+                JOB </br>
+                <input type="text" name="job" value=""></br></br>
+                
+                SKILLS </br>
+                <input type="text" name="skills" value=""></br></br>
+                
+                PROVINCE </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="bankingFinancial">Banking & Financial</option>
+                  <option value="computerIT">Computer & IT</option>
+                  <option value="education">Education</option>
+                  <option value="foodBeverage">Food & Beverage</option>
+                  <option value="property">Property & Real Estate</option>
+                </select></br></br>
+                
+                CITY </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="bankingFinancial">Banking & Financial</option>
+                  <option value="computerIT">Computer & IT</option>
+                  <option value="education">Education</option>
+                  <option value="foodBeverage">Food & Beverage</option>
+                  <option value="property">Property & Real Estate</option>
+                </select></br></br>
+                
+                YEARS EXPERIENCE </br>
+                <select>
+                  <option>--Please Choose--</option>
+                  <option value="automobile">Automobile</option>
+                  <option value="bankingFinancial">Banking & Financial</option>
+                  <option value="computerIT">Computer & IT</option>
+                  <option value="education">Education</option>
+                  <option value="foodBeverage">Food & Beverage</option>
+                  <option value="property">Property & Real Estate</option>
+                </select></br>
+                
+                </br><button class="btn btn-success justify-content-center d-flex pp " id="reload" type="button">Submit</button>
+              
+              </div>   
+            </form>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <!-- end info panel -->
+    <!-- content -->
+    <div class="container kunt">
+    </br>
+    <button class="btn btn-danger mx-1 mb-1 kun" id="stabilize" type="button">Stop the moving graph</button> 
+    
+    </div>
+
+    <div class="container konten justify-content-center d-flex  kont">
+      <div class="row" id="viz"></div>
+      
+    </div>
+    <!-- end content -->
+    <!-- footer -->
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4 ft  ">
+      <div class="footer-copyright text-center py-3  fs">
+      <a > Copy Right 2019</a>
+    </div>
+    </footer> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../fungsi.js"></script>
+    <script>
+		function hanyaAngka(evt) {
+		  var charCode = (evt.which) ? evt.which : event.keyCode
+		   if (charCode > 31 && (charCode < 48 || charCode > 57))
+ 
+		    return false;
+		  return true;
+		}
+	</script>
+  </body>
+</html>
